@@ -34,7 +34,9 @@ pip install -r requirements.txt
 ```shell
 python src/train.py --dataset fer2013 --epochs 300 --batch_size 32
 ```
-
+<div align="center"><img src="./assets/his_acc.png" /></div>
+<div align="center"><img src="./assets/his_loss.png" /></div>
+<div align="center"><img src="./assets/loss.png" /></div>
 
 ## 模型应用
 与传统方法相比，卷积神经网络表现更好，使用该模型构建识别系统。预测时对一张图片进行水平翻转、偏转15度、平移等增广得到多个概率分布，将这些概率分布加权求和得到最后的概率分布，此时概率最大的作为标签（也就是使用了推理数据增强）。

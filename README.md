@@ -21,7 +21,11 @@ pip install -r requirements.txt
 使用经典的卷积神经网络，模型的网络结构设计如下，输入层后加入(1,1)卷积层增加非线性表示且模型层次较浅，参数大量参数集中在全连接层。
 <div align="center"><img src="./assets/CNN.png" /></div>
 <div align="center"><img src="./assets/model.png" /></div>
+
 ## 运行步骤
+1.下载数据集 
+https://pan.baidu.com/s/1DY6LHe3tjyvC1mUuDaupiw   提取码：mo72
+<div align="center"><img src="./assets/download.png" /></div>
 
 ## 模型训练
 主要在FER2013、JAFFE、CK+上进行训练，JAFFE给出的是半身图因此做了人脸检测。最后在FER2013上Pub Test和Pri Test均达到65%左右准确率（该数据集爬虫采集存在标签错误、水印、动画图片等问题），JAFFE和CK+5折交叉验证均达到97%左右准确率（这两个数据集为实验室采集，较为准确标准）。

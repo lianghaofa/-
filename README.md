@@ -3,11 +3,10 @@
 https://github.com/lianghaofa/computer-vision
 
 ## 简介
-使用卷积神经网络构建整个系统，在尝试了Gabor、LBP等传统人脸特征提取方式基础上，深度模型效果显著。在FER2013、JAFFE和CK+三个表情识别数据集上进行模型评估。
-
+对人脸表情识别的方法进行比较，重点介绍目前比较流行且颇具潜力的人脸表情识别方法。在实验中实现了基于深度学习的人脸表情识别方法，在FER2013上Pub Test和Pri Test均达到65%左右准确率，JAFFE和CK+5折交叉验证均达到97%左右准确率。
 
 ## 环境部署
-基于Python3和Keras2（TensorFlow后端），具体依赖安装如下(推荐使用conda虚拟环境)。
+基于Python3.6和Keras2），具体依赖安装如下。
 ```shell script
 git clone https://github.com/lianghaofa/computer-vision
 cd FacialExpressionRecognition
@@ -17,8 +16,6 @@ conda install cudatoolkit=10.1
 conda install cudnn=7.6.5
 pip install -r requirements.txt
 ```
-如果你是Linux用户，直接执行根目录下的`env.sh`即可一键配置环境，执行命令为`bash env.sh`。
-
 
 ## 网络设计
 使用经典的卷积神经网络，模型的网络结构设计如下，输入层后加入(1,1)卷积层增加非线性表示且模型层次较浅，参数大量参数集中在全连接层。
